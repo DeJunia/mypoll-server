@@ -9,7 +9,7 @@ const Ranks = () => {
   useEffect(() => {
     const fetchParties = async () => {
       try {
-        const response = await fetch('/api/parties');
+        const response = await fetch('https://mypollserver.vercel.app/api/parties');
         const data = await response.json();
         setParties(data);
       } catch (error) {
@@ -23,7 +23,7 @@ const Ranks = () => {
 
     const intervalId = setInterval(async () => {
       try {
-        const response = await fetch('/api/parties');
+        const response = await fetch('https://mypollserver.vercel.app/api/parties');
         const data = await response.json();
         setParties((prevParties) => {
           const updatedParties = prevParties.map((party) => {

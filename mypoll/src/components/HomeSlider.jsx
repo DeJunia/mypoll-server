@@ -12,6 +12,7 @@ const HomeSlider = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
+    arrows: false, 
   };
 
   // Array of image URLs

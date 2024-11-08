@@ -15,7 +15,7 @@ const Stat = () => {
     const fetchResults = async () => {
       dispatch(fetchVotesStart());
       try {
-        const res = await fetch('/api/votes/results');
+        const res = await fetch('https://mypollserver.vercel.app/api/votes/results');
         const data = await res.json();
         dispatch(fetchVotesSuccess(data));
       } catch (error) {

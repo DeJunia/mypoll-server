@@ -17,7 +17,7 @@ const useVote = () => {
     const fetchParties = async () => {
       try {
         setPartyLoad(true);
-        const res = await fetch('/api/parties');
+        const res = await fetch('https://mypollserver.vercel.app/api/parties');
         const data = await res.json();
         setParties(data);
         setPartyLoad(false);
@@ -31,7 +31,7 @@ const useVote = () => {
 
     const intervalId = setInterval(async () => {
       try {
-        const res = await fetch('/api/parties');
+        const res = await fetch('https://mypollserver.vercel.app/api/parties');
         const data = await res.json();
         setParties(data);
       } catch (error) {
@@ -49,7 +49,7 @@ const useVote = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/votes', {
+      const res = await fetch('https://mypollserver.vercel.app/api/votes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

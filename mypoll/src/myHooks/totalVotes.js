@@ -8,7 +8,7 @@ const totalVotes = () => {
   useEffect(() => {
     const fetchTotalVotes = async () => {
       try {
-        const response = await fetch('/api/votes/total');
+        const response = await fetch('https://mypollserver.vercel.app/api/votes/total');
         const data = await response.json();
         setTotalVotes(data.totalVotes);
       } catch (error) {
