@@ -798,13 +798,14 @@ main,
 .Ranks {
   width: 100%;
   height: 100%;
+  background-color: var(--primary-colorCLI);
 }
 
 .Ranks .cont{
   overflow-y: scroll;
   padding-block-end: 50px;
-  border: 2px solid greeen;
   width: 100%;
+  background-color: var(--primary-colorCLI);
 }
 
 .ranks-container {
@@ -1046,6 +1047,10 @@ main,
 }
 
 @media screen and (max-width: 770px) {
+  ::-webkit-scrollbar {
+    display: none;
+  };
+
   .slider-container {
     padding-inline: 10px;
     height: 230px;
@@ -1122,7 +1127,7 @@ main,
 
 
   main {
-    padding-block-end: 65px;
+    padding-block-end: 72px;
   }
 
   .barChart {
