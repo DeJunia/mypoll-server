@@ -32,14 +32,13 @@ const Ranks = () => {
           });
 
           // Sort parties by totalVotes in ascending order
-          const sortedParties = updatedParties.sort((a, b) => a.totalVotes - b.totalVotes);
-          console.log('Sorted Parties:', sortedParties); // Debugging line
+          const sortedParties = updatedParties.sort((a, b) => b.totalVotes - a.totalVotes);
           return sortedParties;
         });
       } catch (error) {
         console.error('Error fetching updated parties:', error);
       }
-    }, 20000); // 20 seconds
+    }, 10000); // 10 seconds
 
     return () => {
       clearInterval(intervalId);
