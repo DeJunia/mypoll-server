@@ -21,6 +21,7 @@ const useVote = () => {
         const res = await fetch('https://mypollserver.vercel.app/api/parties');
         const data = await res.json();
         setParties(data);
+        console.log(data)
         setPartyLoad(false);
       } catch (error) {
         setError(true);
@@ -46,9 +47,8 @@ const useVote = () => {
       });
 
       const data = await res.json();
-
+      console.log(data)
       if(res.ok) {
-        socket.emit('vote_cast', data);
         dispatch(updateHasVoted());
         alert('Vote cast successfully');
         navigate('/');
@@ -59,6 +59,11 @@ const useVote = () => {
     } finally {
       setLoading(false);
     }
+
+
+
+
+    console.log(selectedParty)
   }
 
 
