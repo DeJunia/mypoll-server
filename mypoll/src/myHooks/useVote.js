@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import socket from '../socket';
 import { fetchVotesStart, fetchVotesSuccess, fetchVotesFailure } from '../reduxes/votes/voteSlice';
 import { updateHasVoted } from '../reduxes/user/userSlice';
@@ -12,7 +12,6 @@ const useVote = () => {
   const [ loading, setLoading ] = useState(false);
   const [ partyLoad, setPartyLoad ] = useState(false);
   const [ error, setError ] = useState(false);
-  const { currentUser } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
