@@ -11,26 +11,33 @@ import cors from "cors";
 
 dotenv.config();
 const app = express();
+
+// Middleware
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors(
-  {
-    origin: 'https://mypoll.vercel.app', // Allow only your frontend origin
-     methods: 'GET,POST,PUT,DELETE', // Specify the allowed methods
-     credentials: true,
-  }
-));
+// CORS configuration
+app.use(cors({
+  origin: 'https://mypoll.vercel.app', // Allow only your frontend origin
+  methods: 'GET,POST,PUT,DELETE', // Specify the allowed methods
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+}));
 
+// Routes
 app.use("/api/users", userRoutes);
 app.use("/api/parties", partyRoutes);
 app.use("/api/votes", voteRoutes);
 app.use("/api/posts", postRoutes);
 
+// Root route
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+// Error handling middleware
+app.use(errorMiddleware);
+
+// Start server
 const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
@@ -45,5 +52,3 @@ const startServer = async () => {
 };
 
 startServer();
-
-app.use(errorMiddleware);
