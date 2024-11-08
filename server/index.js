@@ -7,11 +7,20 @@ import userRoutes from "./routes/user.routes.js";
 import partyRoutes from "./routes/party.routes.js";
 import voteRoutes from "./routes/vote.routes.js";
 import postRoutes from "./routes/post.routes.js";
+import cors from "cors";
 
 dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
+
+app.use(cors(
+  {
+    origin: 'https://mypoll.vercel.app', // Allow only your frontend origin
+     methods: 'GET,POST,PUT,DELETE', // Specify the allowed methods
+     credentials: true,
+  }
+));
 
 app.use("/api/users", userRoutes);
 app.use("/api/parties", partyRoutes);
