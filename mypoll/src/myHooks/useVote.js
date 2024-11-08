@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import {useSelector, useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import socket from '../socket';
 import { fetchVotesStart, fetchVotesSuccess, fetchVotesFailure } from '../reduxes/votes/voteSlice';
 import { updateHasVoted } from '../reduxes/user/userSlice';
 import { useNavigate } from 'react-router-dom';
@@ -62,15 +63,8 @@ const useVote = () => {
     }
   }
 
-  return {
-    parties,
-    selectedParty,
-    setSelectedParty,
-    loading,
-    partyLoad,
-    error,
-    handleVote,
-  };
-};
 
-export default useVote;
+  return { parties, selectedParty, loading, partyLoad, error, handleVote, setSelectedParty };
+}
+
+export default useVote
