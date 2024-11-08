@@ -59,7 +59,7 @@ export const castVote = async (req, res, next) => {
 export const getVoteResults = async (req, res, next) => {
   try {
     const results = await Party.find()
-      .select('name totalVotes flag')
+      .select('name totalVotes flag flagName flagBearer')
       .sort('-totalVotes');
     
     const totalVotes = results.reduce((sum, party) => sum + party.totalVotes, 0);

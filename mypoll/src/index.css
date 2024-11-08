@@ -391,10 +391,16 @@ button {
 .rank-item .Head,
 .voteRank,
 .timelef,
-.timediv {
+.timediv,
+.poll-candidates,
+.poll-bar,
+.candidate figure,
+.follow,
+.cofe a{
   display: flex;
   flex-direction: row;
 }
+
 .BallotPaper,
 .theBallot,
 .ballotTab,
@@ -410,7 +416,8 @@ button {
 .progresBar,
 main,
 .Navbar a,
-.rank-item .Head div {
+.rank-item .Head div,
+.candidate {
   display: flex;
   flex-direction: column;
 }
@@ -421,7 +428,9 @@ main,
 .progresBarItem .top,
 .progressPg,
 .head,
-.timediv {
+.timediv,
+.poll-candidates,
+.poll-bar {
   justify-content: space-between;
 }
 
@@ -431,7 +440,9 @@ main,
 .totalVotes,
 .HeaderMdNav ul li a,
 .voteRank,
-.timelef {
+.timelef,
+.candidate figure,
+.follow {
   align-items: center;
   justify-content: center;
 }
@@ -465,8 +476,17 @@ main,
 .rank-item .Head,
 .timelef,
 .timediv,
-.Profile .content {
+.Profile .content,
+.poll-bar {
   align-items: center;
+}
+
+.follow a {
+  border: 2px solid var(--text-li);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .Header {
@@ -1018,6 +1038,105 @@ main,
     transform: scale(1);
     opacity: 1;
   }
+}
+
+.poll-container {
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  gap: 20px;
+}
+
+.poll-container a {
+  padding: 10px;
+  background-color: var(--primary-colorCLI);
+  border-radius: 8px;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.poll-candidates {
+  gap: 10px;
+}
+
+.candidate {
+  gap: 10px;
+}
+
+.candidate figure {
+  width: 100%;
+  background-color: var(--primary-colorCLI);
+  border-radius: 8px;
+}
+
+.candidate img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.candidate-name {
+  font-size: var(--font-sm);
+  text-align: center;
+  color: var(--text);
+}
+
+.candidate-votes {
+  font-size: var(--font-sm);
+  text-align: center;
+  color: var(--text);
+  font-weight: var(--font-bold);
+}
+
+.poll-bar {
+  width: 100%;
+  height: 5px;
+  background-color: var(--primary-colorCLI);
+  margin: 20px 0;
+  position: relative;
+}
+
+.poll-bar-item {
+  background-color: var(--spec-blue);
+  position: absolute;
+}
+
+.poll-notes {
+  font-size: 0.8em;
+  color: #555;
+  margin-top: 20px;
+}
+
+.cofe {
+  padding: 10px 20px;
+  background-color: rgba(255, 166, 0, 0.199);
+  border: 2px solid orange;
+  border-radius: 8px;
+}
+
+.cofe a {
+  gap: 10px;
+}
+
+.cofe a p {
+  color: orange;
+}
+
+.cofe a .Icon {
+  color: orange;
+}
+
+.follow {
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 936px) {

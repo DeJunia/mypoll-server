@@ -1,7 +1,7 @@
 import React from 'react'
 import HomeSlider from '../components/HomeSlider';
 import { useFeatureContext } from '../context/featureContext';
-
+import TheVs from '../components/theVs';
 const Home = () => {
 
   const { timeLeft, formatTime } = useFeatureContext();
@@ -18,7 +18,7 @@ const Home = () => {
             </div>
             <span>:</span>
             <div className="countdown-item">
-              <div className="flip">{timeLeft.hours}</div>
+              <div className="flip">{formatTime(timeLeft.hours)}</div>
             </div>
             <span>:</span>
             <div className="countdown-item">
@@ -30,6 +30,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <TheVs/>
       </div>
     </main>
   )
