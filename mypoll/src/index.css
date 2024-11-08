@@ -1052,11 +1052,12 @@ main,
 @media screen and (max-width: 770px) {
   ::-webkit-scrollbar {
     display: none;
-  };
+  }
 
   .slider-container {
     padding-inline: 10px;
     height: 230px;
+    margin-bottom: 20px;
   }
   
   .slider {

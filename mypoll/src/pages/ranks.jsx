@@ -56,7 +56,7 @@ const Ranks = () => {
   return (
     <main className='Ranks'>
       <div className="cont">
-        <h4>Candidates ranks on ballot</h4>
+        <h4>Candidates ranks based on votes</h4>
         <div className='ranks-container'>
           <AnimatePresence>
             {parties.map((party) => (
