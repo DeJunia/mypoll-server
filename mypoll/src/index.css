@@ -750,9 +750,12 @@ main,
 
 .Stat {
   height: 100%;
+  width: 100%;
 }
 
 .Stat .content {
+  width: 100%;
+  height: 100%;
   overflow-y: auto;
   gap: 20px;
   padding-block-end: 70px;
@@ -1054,7 +1057,6 @@ main,
   .slider-container {
     padding-inline: 10px;
     height: 230px;
-    margin-bottom: 20px;
   }
   
   .slider {
