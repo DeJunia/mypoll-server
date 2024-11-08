@@ -111,7 +111,6 @@ main .content {
   width: 100%;
   height: 100%;
   overflow: auto;
-  border: 1px solid green;
 }
 
 a {
@@ -1035,13 +1034,18 @@ main,
   .sliderTxt h2 {
     font-size: var(--font-large);
   }
+
+  main {
+    padding-block-end: 60px;
+  }
   
 }
 
 @media screen and (max-width: 600px) {
   .slider-container {
     padding-inline: 10px;
-    height: 250px;
+    height: 200px;
+    margin-bottom: 20px;
   }
   
   .slider {
@@ -1057,7 +1061,7 @@ main,
   }
 
   .sliderTxt p {
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
   }
 
   .sliderTxt a {
