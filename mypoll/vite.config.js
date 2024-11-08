@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://mypollserver.vercel.app',
+        target: 'https://mypollserver.vercel.app/',
         changeOrigin: true,
         secure: false,
       },
