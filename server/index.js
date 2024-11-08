@@ -18,9 +18,9 @@ app.use(cookieParser());
 
 // CORS configuration
 app.use(cors({
-  origin: 'https://mypoll.vercel.app', // Allow only your frontend origin
-  methods: 'GET,POST,PUT,DELETE', // Specify the allowed methods
-  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  origin: 'https://mypoll.vercel.app', // Frontend origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true, // Allow credentials (cookies)
 }));
 
 // Routes

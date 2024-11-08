@@ -13,6 +13,7 @@ const useVote = () => {
   const [ error, setError ] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  console.log(selectedParty)
 
   useEffect(() => {
     const fetchParties = async () => {
@@ -60,10 +61,6 @@ const useVote = () => {
       setLoading(false);
     }
 
-
-
-
-    console.log(selectedParty)
   }
 
 

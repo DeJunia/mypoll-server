@@ -3,16 +3,15 @@ import { errorHandler } from './error.js';
 import User from '../models/user.model.js';
 
 export const verifyToken = (req, res, next) => {
-  const token = req.cookies.access_token;
-  if (!token) return next(errorHandler(401, "Access denied!"));
+  const token = req.cookies.access_token; // Ensure this is correctly reading cookies
+  if (!token) return next(errorHandler(401, 'Access denied!'));
 
   jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
-    if(err) return next(errorHandler(403, "Invalid token."));
+    if (err) return next(errorHandler(403, 'Invalid token.'));
     req.user = user;
     next();
   });
 };
-
 export const validateGhanaCard = (req, res, next) => {
   const { ghanaCard } = req.body;
   const ghanaCardRegex = /^GHA-\d{9}-\d$/;
