@@ -22,7 +22,7 @@ const useLogIn = () => {
 
     try {
       dispatch(signinStart());
-      const res = await fetch('/api/users/login', {
+      const res = await fetch('https://mypollserver.vercel.app/api/users/login', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json' 
