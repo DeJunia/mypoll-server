@@ -38,7 +38,7 @@ const Ranks = () => {
       } catch (error) {
         console.error('Error fetching updated parties:', error);
       }
-    }, 10000); // 10 seconds
+    }, 2000); // 10 seconds
 
     return () => {
       clearInterval(intervalId);
