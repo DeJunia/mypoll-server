@@ -4,7 +4,7 @@ import useSignUp from '../myHooks/useSignUp';
 
 const SignUp = () => {
 
-  const { loading, error, handleInputChange, handleSubmit } = useSignUp();
+  const { loading, error, signUpSuccess, handleInputChange, handleSubmit } = useSignUp();
 
   return (
     <div className='LogIn'>
@@ -39,6 +39,9 @@ const SignUp = () => {
               error && <p className='error'>Wrong Credentials! Change it</p>
             }
           </div>
+          {
+            signUpSuccess && <p className='success'>Sign Up Successful! Please Sign In</p>
+          }
         </form>
       </div>
     </div>

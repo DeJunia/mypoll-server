@@ -1,10 +1,12 @@
 import React from 'react'
 import useLogIn from '../myHooks/useLogIn'
+import useSignUp from '../myHooks/useSignUp'
 import { Link } from 'react-router-dom'
 
 const LogIn = () => {
 
   const { loading, error, handleChange, handleSubmit } = useLogIn();
+  const { signUpSuccess } = useSignUp();
 
   return (
     <div className='LogIn'>
@@ -32,6 +34,9 @@ const LogIn = () => {
           <div>
             {
               error && <p className='error'>Wrong Credentials! Change it</p>
+            }
+            {
+              signUpSuccess && <p className='success'>Sign Up Successful! Please Sign In</p>
             }
           </div>
         </form>

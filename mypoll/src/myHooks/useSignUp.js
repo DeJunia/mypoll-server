@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const useSignUp = () => {
   const [ formData, setFormData ] = useState({});
+  const [ signUpSuccess, setSignUpSucess ] = useState(false);
   const [ loading, setLoading ] = useState(false);
   const [ error, setError ] = useState(false);
   const navigate = useNavigate();
@@ -26,10 +27,12 @@ const useSignUp = () => {
       setLoading(false);
       if(data.success === false) {
         setError(true);
+        set
         return
       }
       if(res.ok) {
         navigate('/signin');
+        setSignUpSucess(true);
       } else {
         setError(true);
         const data = await res.json();
@@ -41,7 +44,7 @@ const useSignUp = () => {
     }
   }
   return {
-    handleInputChange, handleSubmit, loading, error
+    handleInputChange, handleSubmit, loading, error, signUpSuccess
   }
 }
 

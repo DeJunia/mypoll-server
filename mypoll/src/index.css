@@ -1139,6 +1139,14 @@ main,
   border-radius: 8px;
 }
 
+.success {
+  font-size: var(--font-sm);
+  font-weight: var(--font-bold);
+  color: rgb(14, 156, 14);
+  width: 100%;
+  text-align: center;
+}
+
 @media screen and (max-width: 936px) {
   .slider-container {
     height: 300px;
