@@ -343,11 +343,12 @@ button {
   background-color: var(--primary-colorCLI);
   color: var(--text);
   font-weight: var(--font-li);
-  font-size: var(--font-sm);
+  font-size: var(--font-xm);
 }
 
 .LogForm .deLog input::placeholder {
   color: var(--text-li);
+  font-size: var(--font-xm);
 }
 
 .LogForm button {

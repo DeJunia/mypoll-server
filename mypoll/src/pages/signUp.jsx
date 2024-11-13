@@ -14,17 +14,17 @@ const SignUp = () => {
         <form className='LogForm' onSubmit={handleSubmit}>
           <div className="deLog">
             <p>Username</p>
-            <input type="text" placeholder='Enoch Appiagyei' id='username'
+            <input type="text" placeholder='Your name' id='username'
             onChange={handleInputChange}/>
           </div>
           <div className="deLog">
             <p>Password</p>
-            <input type="password" id='password' 
+            <input type="password" id='password' placeholder="Password"
             onChange={handleInputChange}/>
           </div>
           <div className="deLog">
             <p>ECOWAS Identity Card (Ghana Card)</p>
-            <input type="text" defaultValue="GHA-XXXXXXXXX-X" id='ghanaCard' 
+            <input type="text" placeholder='GHA-123456789-0' id='ghanaCard' 
             onChange={handleInputChange}/>
           </div>
          <button type='submit' disabled={loading}> 
