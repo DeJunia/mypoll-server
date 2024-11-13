@@ -13,12 +13,10 @@ const SignUp = () => {
         <h2>Sign Up</h2>
         <form className='LogForm' onSubmit={handleSubmit}>
           <div className="deLog">
-            <p>Username</p>
             <input type="text" placeholder='Your name' id='username'
             onChange={handleInputChange}/>
           </div>
           <div className="deLog">
-            <p>Password</p>
             <input type="password" id='password' placeholder="Password"
             onChange={handleInputChange}/>
           </div>

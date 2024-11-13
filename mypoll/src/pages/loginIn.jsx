@@ -15,13 +15,11 @@ const LogIn = () => {
         <h2>Sign In</h2>
         <form className='LogForm' onSubmit={handleSubmit}>
           <div className="deLog">
-            <p>Username</p>
-            <input type="text" placeholder='Enoch Appiagyei' id='username'
+            <input type="text" placeholder='Username' id='username'
             onChange={handleChange}/>
           </div>
           <div className="deLog">
-            <p>Password</p>
-            <input type="password" id='password' 
+            <input type="password" id='password' placeholder='Password'
             onChange={handleChange}/>
           </div>
          <button type='submit' disabled={loading}> 

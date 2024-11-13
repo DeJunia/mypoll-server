@@ -342,12 +342,13 @@ button {
   border: none;
   background-color: var(--primary-colorCLI);
   color: var(--text);
-  font-weight: var(--font-li);
+  font-weight: var(--font-light);
   font-size: var(--font-xm);
 }
 
 .LogForm .deLog input::placeholder {
   color: var(--text-li);
+  font-weight: var(--font-light);
   font-size: var(--font-xm);
 }
 
@@ -364,7 +365,7 @@ button {
 .LogForm button p {
   color: var(--primary-color);
   font-weight: var(--font-bold);
-  font-size: var(--font-sm);
+  font-size: var(--font-xm);
 }
 
 .deLog p {
